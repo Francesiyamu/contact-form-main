@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(148, 38%, 91%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Karla", sans-serif;
+}
+
+main {
+  width: 90%;
+  max-width: 736px;
+  margin: auto;
+  background-color: hsl(0, 0%, 100%);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+main h2 {
+  color: hsl(187, 24%, 22%);
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-weight: 400;
+}
+form .name-info {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+form .name-info .flex-column {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form .name-info .flex-column input[type=text] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid hsl(186, 15%, 59%);
+  outline: none;
+}
+form .email-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form .email-div input[type=email] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid hsl(186, 15%, 59%);
+  outline: none;
+}
+form .query-type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form .query-type .flex-box {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+form .query-type .flex-box .radio-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid hsl(186, 15%, 59%);
+  padding: 6px 28px;
+  border-radius: 5px;
+}
+form .message {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form .message textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid hsl(186, 15%, 59%);
+  outline: none;
+  resize: vertical;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: hsl(169, 82%, 17%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=main.css.map */

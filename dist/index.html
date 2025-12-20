@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/main.css">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+</head>
+<body>
+
+<main>
+  <h2>Contact Us</h2>
+
+  <form action="">
+    <div class="name-info">
+      <div class="flex-column">
+        <label for="firstname"> First Name *</label>
+        <input type="text" name="firstname" id="firstname" required>
+      </div>
+
+      <div class="flex-column">
+        <label for="lastname"> Last Name *</label>
+        <input type="text" name="lastname" id="lastname" required>
+      </div>  
+    </div>
+
+    <div class="email-div">
+      <label for="email">Email Address *</label>
+      <input type="email" name="email" id="email" required aria-placeholder="Please enter a valid email address">
+    </div>
+     
+    
+      <div class="query-type">
+        <label for="query-type">Query Type *</label>
+        <div class="flex-box">
+          <div class="radio-input">
+            <input type="radio" id="general" required>
+            <label for="general"> General Enquiry</label>
+          </div>
+          <div class="radio-input">
+            <input type="radio" id="support" required>
+            <label for="Support">Support Request</label>
+          </div>
+        </div>  
+      </div>
+
+      <div class="message">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="5"></textarea>
+      </div>
+  </form>
+
+    <div class="checkbox">
+      <input type="checkbox" name="consent" id="consent">
+      <label for="consent">I consent to being contacted by the team *</label>
+    </div>
+
+    <input type="button" value="Submit" class="button">
+</main>
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Frances</a>.
+  </footer>
+</body>
+</html>
