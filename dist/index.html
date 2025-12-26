@@ -15,51 +15,59 @@
 <main>
   <h2>Contact Us</h2>
 
-  <form action="">
+  <form action="" id="form-details">
     <div class="name-info">
       <div class="flex-column">
         <label for="firstname"> First Name *</label>
         <input type="text" name="firstname" id="firstname" required>
+        <p id="firstname-error" class="error-message"></p>
       </div>
 
       <div class="flex-column">
         <label for="lastname"> Last Name *</label>
-        <input type="text" name="lastname" id="lastname" required>
+        <input type="text" name="lastname" id="lastname" required >
+        <p id="lastname-error" class="error-message"></p>
       </div>  
     </div>
 
     <div class="email-div">
       <label for="email">Email Address *</label>
-      <input type="email" name="email" id="email" required aria-placeholder="Please enter a valid email address">
+      <input type="email" name="email" id="email" required>
+      <p id="email-error" class="error-message"></p>
     </div>
      
     
       <div class="query-type">
         <label for="query-type">Query Type *</label>
-        <div class="flex-box">
-          <div class="radio-input">
-            <input type="radio" id="general" required>
+        <div class="flex-box" id="select-query">
+          <div class="radio-input" >
+            <input type="radio" id="general" name="query-type" required>
             <label for="general"> General Enquiry</label>
           </div>
           <div class="radio-input">
-            <input type="radio" id="support" required>
-            <label for="Support">Support Request</label>
+            <input type="radio" id="support" name="query-type" required>
+            <label for="support">Support Request</label>
           </div>
         </div>  
+        <p id="query-type-error" class="error-message"></p>
       </div>
 
       <div class="message">
-        <label for="message">Message</label>
-        <textarea name="message" id="message" cols="30" rows="5"></textarea>
+        <label for="message">Message *</label>
+        <textarea name="message" id="message" cols="30" rows="5" required></textarea>
+        <p id="message-error" class="error-message"></p>
       </div>
   </form>
 
     <div class="checkbox">
       <input type="checkbox" name="consent" id="consent">
       <label for="consent">I consent to being contacted by the team *</label>
+      <p id="consent-error" class="error-message"></p>
     </div>
 
-    <input type="button" value="Submit" class="button">
+    <input type="submit" value="Submit" class="button" id="submit-btn" onclick="validateForm()">
+
+    <p id="demo"></p>
 </main>
 
   
@@ -67,5 +75,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Frances</a>.
   </footer>
+
+  <script src="../JS/script.js"></script>
 </body>
 </html>

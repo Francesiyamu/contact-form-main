@@ -38,6 +38,11 @@ form {
   gap: 24px;
   font-weight: 400;
 }
+form .error-message {
+  color: hsl(0, 66%, 54%);
+  font-size: 12px;
+  height: 14px;
+}
 form .name-info {
   display: flex;
   gap: 24px;
@@ -49,34 +54,50 @@ form .name-info .flex-column {
   flex-direction: column;
   gap: 10px;
 }
-form .name-info .flex-column input[type=text] {
+form .name-info .flex-column input[type=text],
+form .name-info .flex-column :focus,
+form .name-info .flex-column :valid {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid hsl(186, 15%, 59%);
   outline: none;
 }
-form .email-div {
+form .name-info .flex-column input[type=text]:invalid:required,
+form .name-info .flex-column :focus:invalid:required,
+form .name-info .flex-column :valid:invalid:required {
+  border: 1px solid red;
+}
+
+.email-div {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-form .email-div input[type=email] {
+.email-div input[type=email],
+.email-div :focus,
+.email-div :valid {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid hsl(186, 15%, 59%);
   outline: none;
 }
-form .query-type {
+.email-div input[type=email]:invalid:required,
+.email-div :focus:invalid:required,
+.email-div :valid:invalid:required {
+  border: 1px solid red;
+}
+
+.query-type {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-form .query-type .flex-box {
+.query-type .flex-box {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
 }
-form .query-type .flex-box .radio-input {
+.query-type .flex-box .radio-input {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -84,17 +105,37 @@ form .query-type .flex-box .radio-input {
   padding: 6px 28px;
   border-radius: 5px;
 }
-form .message {
+.query-type .flex-box .radio-input:focus, .query-type .flex-box .radio-input:valid {
+  border: 1px solid hsl(186, 15%, 59%);
+  outline: none;
+}
+.query-type .flex-box .radio-input:invalid:required {
+  border: 1px solid red;
+}
+
+.message {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-form .message textarea {
+.message textarea {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid hsl(186, 15%, 59%);
   outline: none;
   resize: vertical;
+}
+.message textarea:focus, .message textarea:valid {
+  border: 1px solid hsl(186, 15%, 59%);
+  outline: none;
+}
+.message textarea:invalid:required {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: var(--Red);
+  text-align: end;
 }
 
 .checkbox {

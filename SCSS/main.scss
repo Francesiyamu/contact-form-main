@@ -49,6 +49,12 @@ form{
     gap: 24px;
     font-weight: map-get($map: $font-weights , $key: "regular" );
 
+    .error-message{
+        color: map-get($map: $colors, $key: "red");
+        font-size: 12px;
+        height: 14px;
+    }
+
     .name-info{
         display: flex;
         gap: 24px;
@@ -61,26 +67,41 @@ form{
             gap: 10px;
 
 
-            input[type="text"]{
+            input[type="text"],
+            :focus,
+            :valid{
                 padding: 10px;
                 border-radius: 5px;
                 border: 1px solid map-get($map: $colors, $key: "grey-500");
-                outline: none;
-            }
+                outline: none; 
+
+                &:invalid:required {
+                    border: 1px solid red;
+                }
+            }          
+
         }
 
     }
+}
+
 
     .email-div{
         display: flex;
         flex-direction: column;
         gap: 10px;
 
-        input[type="email"]{
+        input[type="email"], 
+        :focus,
+        :valid{
             padding: 10px;
             border-radius: 5px;
             border: 1px solid map-get($map: $colors, $key: "grey-500");
             outline: none;
+
+            &:invalid:required{
+                border: 1px solid red;
+            }
         }
     }
 
@@ -102,12 +123,21 @@ form{
                 border: 1px solid map-get($map: $colors, $key: "grey-500");
                 padding: 6px 28px;
                 border-radius: 5px;
-                
-            }
+
+                &:focus,
+                &:valid{
+                    border: 1px solid map-get($map: $colors, $key: "grey-500");
+                    outline: none;
+                }
+
+                &:invalid:required{
+                    border: 1px solid red;
+                }
         }
 
     }
 
+}
     .message{
         display: flex;
         flex-direction: column;
@@ -119,11 +149,39 @@ form{
             border: 1px solid map-get($map: $colors, $key: "grey-500");
             outline: none;
             resize: vertical;
+
+            &:focus,
+            &:valid{
+                border: 1px solid map-get($map: $colors, $key: "grey-500");
+                outline: none;
+            }
+
+            &:invalid:required{
+                border: 1px solid red;
+            }
+
         }
 
     }
 
+
+
+
+
+
+
+
+
+.error-message{
+    color: var(--Red);
+    text-align: end;
 }
+
+
+
+
+
+
 
 .checkbox{
         display: flex;
