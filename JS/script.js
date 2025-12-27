@@ -39,15 +39,21 @@ function validateForm(event) {
     let isValid = true;
 
     // Check firstName
-    if (!firstNameRegex.test(firstName) || firstName === "") {
+    if (firstName === "") {
         firstNameError.textContent = "This field is required";
+        isValid = false;
+    } else if(!firstNameRegex.test(firstName)){
+        firstNameError.textContent = "Please enter a valid first name";
         isValid = false;
     }
     
     //validate lastName
     
-    if (!lastNameRegex.test(lastName) || lastName === "") {
+    if (lastName === "") {
         lastNameError.textContent = "This field is required";
+        isValid = false;
+    } else if(!lastNameRegex.test(lastName)){
+        lastNameError.textContent = "Please enter a valid last name";
         isValid = false;
     }
     
